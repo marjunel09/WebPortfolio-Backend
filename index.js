@@ -13,9 +13,10 @@ app.use('/uploads', express.static('uploads'));
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000' || 'web-portfolio-client.vercel.app',
+    origin: ['http://localhost:3000', 'https://web-portfolio-client.vercel.app'],
     methods: ['GET', 'POST'],
 }));
+
 
 app.use('/projects', projectRoutes);
 app.post("/api/send-email", sendEmail);
