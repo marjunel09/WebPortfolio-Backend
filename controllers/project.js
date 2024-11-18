@@ -23,7 +23,6 @@ export const addProject = async (req, res) => {
   }
 };
 
-
 export const getProjects = async (req, res) => {
   try {
     const projects = await Project.find();

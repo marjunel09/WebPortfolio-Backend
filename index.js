@@ -8,15 +8,12 @@ import { sendEmail } from "./util/emailSender.js";
 dotenv.config();
 
 const app = express();
-app.use('/uploads', express.static('uploads'));
-
 
 app.use(express.json());
 app.use(cors({
     origin: ['http://localhost:3000', 'https://web-portfolio-client.vercel.app'],
     methods: ['*'],
 }));
-
 
 app.use('/projects', projectRoutes);
 app.post("/api/send-email", sendEmail);
