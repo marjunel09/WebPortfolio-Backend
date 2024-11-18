@@ -18,7 +18,7 @@ app.use(cors({
 app.use('/projects', projectRoutes);
 app.post("/api/send-email", sendEmail);
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect('mongodb+srv://admin:admin1234@lagmandb.c5k81.mongodb.net/WebDev-Portfolio?retryWrites=true&w=majority&appName=LagmanDB')
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
