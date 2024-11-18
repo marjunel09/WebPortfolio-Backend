@@ -14,7 +14,7 @@ app.use('/uploads', express.static('uploads'));
 app.use(express.json());
 app.use(cors({
     origin: ['http://localhost:3000', 'https://web-portfolio-client.vercel.app'],
-    methods: ['GET', 'POST'],
+    methods: ['*'],
 }));
 
 
